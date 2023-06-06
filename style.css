@@ -129,6 +129,7 @@ nav {
 
 /* Mobile menu */
   .mobile-menu {
+    background-color:white;
     position: absolute;
     padding: 24px;
     top: 50px;
@@ -161,10 +162,11 @@ nav {
   }
 
 
-  /* Product detail */
+  /* Aside Product detail */
 .product-detail {
+      background-color: white;
       width: 360px;
-      padding: 24px;
+      padding: 0 24px;
       box-sizing: border-box;
       position: absolute;
       right: 0;
@@ -238,21 +240,6 @@ nav {
     }
 
 
-
-
-
-
-
-
-
-@media (max-width: 640px) {
-      .product-detail {
-        width: 100%;
-      }
-}
-
-
-
 @media (max-width: 640px) {
   .menu {
     display: block;
@@ -265,6 +252,9 @@ nav {
   }
   .desktop-menu {
     display: none;
+  }
+  .product-detail {
+    width: 100%;
   }
 }
 
