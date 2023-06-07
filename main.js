@@ -42,28 +42,73 @@ const productList = [];
 productList.push(
     {
     name: 'Bike',
-    proce: 120,
+    price: 120,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
     name: 'Bike',
-    proce: 120,
+    price: 120,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
     name: 'Bike',
-    proce: 120,
+    price: 120,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     }
 );
 
 
+// <!-- <div class="product-card">
+// <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+// <div class="product-info">
+//   <div>
+//     <p>$120,00</p>
+//     <p>Bike</p>
+//   </div>
+//   <figure>
+//     <img src="./icons/bt_add_to_cart.svg" alt="">
+//   </figure>
+// </div>
+// </div> -->
+
 function renderProductList(arr){
-    for (product of productList){}
+    for (product of arr){
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+        const imageProduct = document.createElement('img');
+        imageProduct.setAttribute('src', product.image);
+
+        const productInfo = document.createElement('div');
+        productInfo.classList.add('product-info');
+
+        const prodductItem = document.createElement('div');
+        const price = document.createElement('p');
+        price.innerText = product.price;
+
+        const name = document.createElement('p');
+        name.innerText = product.name;
+
+
+        const figure = document.createElement('figure');
+        const iconCart = document.createElement('img');
+        iconCart.setAttribute('src',"./icons/bt_add_to_cart.svg");
+
+        //
+        figure.appendChild(iconCart);
+        prodductItem.append(price, name);
+        productInfo.append(prodductItem, figure)
+        productCard.append(imageProduct, productInfo);
+
+
+        const cardsContainer = document.querySelector('.cards-container');
+        cardsContainer.append(productCard);
+
+    }   
 
     
 
 }
 
+renderProductList(productList);
 
 
