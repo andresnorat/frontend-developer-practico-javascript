@@ -39,8 +39,31 @@ function toogleCarritoAside() {
 }
 
 const productList = [];
-productList.push({
+productList.push(
+    {
     name: 'Bike',
     proce: 120,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
+    },
+    {
+    name: 'Bike',
+    proce: 120,
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    },
+    {
+    name: 'Bike',
+    proce: 120,
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    }
+);
+
+
+function renderProductList(arr){
+    for (product of productList){}
+
+    
+
+}
+
+
+
